@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
     public function createDateDefault(){
 
-        $arrLicenseType =['Xe Hai Bánh','Xe Bốn Bánh'];
+        $arrLicenseType =[['Xe Hai Bánh','img/page/moto.png'],['Xe Bốn Bánh','img/page/oto.png']];
         $arrLicenseRank =[['key'=>'1','value'=>['A1','A2','A3','A4']],
                           ['key'=>'2','value'=>['B1','B2']],
                           ['key'=>'2','value'=>['C']],
@@ -34,7 +34,8 @@ class DatabaseSeeder extends Seeder
 
         for ($i=0;$i<count($arrLicenseType) ; $i++) {
            $type = new LicenseType();
-           $type->name= $arrLicenseType[$i];
+           $type->name= $arrLicenseType[$i][0];
+           $type->img =$arrLicenseType[$i][1];
            $type->save(); 
         }
 
@@ -70,8 +71,7 @@ class DatabaseSeeder extends Seeder
         $config->description ="Thi bằng lái xe máy tại, học bằng lái xe máy A1 , đơn giản, nhanh chóng, đăng ký thi ngay, đảm bảo đỗ 99%.";
         $config->save();
 
-        $arrCategory =[['Trang chủ','trang-chu'], ['Tin Tức','tin-tuc'],['Bộ Đề','bo-de'],['Thi Thử','thi-thu'],
-                        ['Mẹo Thi','ky-nang'],['Liên Hệ','lien-he']];
+        $arrCategory =[['Trang chủ','trang-chu','0'], ['Tin Tức','tin-tuc','1'],['Bộ Đề','bo-de','2'],['Thi Thử','thi-thu','3'],['Mẹo Thi','ky-nang','4'],['Liên Hệ','lien-he','5']];
        
         foreach ($arrCategory as $value) {
            $category = new Category();
