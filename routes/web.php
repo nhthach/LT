@@ -20,10 +20,11 @@ Route::prefix('trang-chu')->group(function () {
 		'as'=> 'article.index',
 		'uses'=>'ActicleController@index'
 	]);
-	Route::get('/{name}/{id}', [
-		'as'=>'article.category',
-		'uses'=>'ActicleController@getByCategory'
-	]);
+	// Route::get('/{name}/{id}', [
+	// 	'as'=>'article.category',
+	// 	'uses'=>'ActicleController@getByCategory'
+	// ]);
+
 });
 
 Route::prefix('thi-thu')->group(function () {
