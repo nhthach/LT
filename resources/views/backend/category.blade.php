@@ -21,6 +21,7 @@
                       <th style="width: 10px">#</th>
                       <th>Name</th>
                       <th>Parent</th>
+                      <th>Path</th>
                       <th>Nb.Acticle</th>
                       <th>Active</th>
                       <th >Created</th>
@@ -33,9 +34,10 @@
                       <td>{{$item->id}}.</td>
                       <td>{{$item->name}}</td>
                       <td>{{$item->parent['name']}}</td>
-                        <td>
-                          <span class="badge bg-green">{{$item->articleCount}}</span>
-                        </td>
+                      <td>{{$item->url}}</td>
+                      <td>
+                        <span class="badge bg-green">{{$item->articleCount}}</span>
+                      </td>
                       <td>
                         <span class="badge bg-green">ON</span>
                       </td>

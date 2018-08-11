@@ -70,14 +70,17 @@ class DatabaseSeeder extends Seeder
         $config->description ="Thi bằng lái xe máy tại, học bằng lái xe máy A1 , đơn giản, nhanh chóng, đăng ký thi ngay, đảm bảo đỗ 99%.";
         $config->save();
 
-        $arrCategory =['Trang chủ', 'Tin Tức','Bộ Đề','Thi Thử','Mẹo Thi','Liên Hệ'];
+        $arrCategory =[['Trang chủ','trang-chu'], ['Tin Tức','tin-tuc'],['Bộ Đề','bo-de'],['Thi Thử','thi-thu'],
+                        ['Mẹo Thi','ky-nang'],['Liên Hệ','lien-he']];
        
         foreach ($arrCategory as $value) {
            $category = new Category();
-           $category->name= $value;
-           $category->url = 'home';
+           $category->name= $value[0];
+           $category->url = $value[1];
            $category->save();
         }
+
+
         $arr = ['Đề số 1','Đề số 2','Đề số 3','Đề số 4','Đề số 5','Đề số 6','Đề số 7','Đề số 8'];
         $rank = LicenseRank::get();
         foreach ($rank as $key => $value) {
