@@ -49,9 +49,12 @@ class QuestionController extends Controller
                                                 ['questiontype_id', '=', 3]));
             if($quizId==null || $quizId==""){
 
-                $arrQuestionText->orderByRaw('RAND()')->take($objRank['qt_type_text']);
-                $arrQuestionIcon->orderByRaw('RAND()')->take($objRank['qt_type_icon']);
-                $arrQuestionPic->orderByRaw('RAND()')->take($objRank['qt_type_pic']);   
+                // $arrQuestionText->orderByRaw('RAND()')->take($objRank['qt_type_text']);
+                // $arrQuestionIcon->orderByRaw('RAND()')->take($objRank['qt_type_icon']);
+                // $arrQuestionPic->orderByRaw('RAND()')->take($objRank['qt_type_pic']);   
+                $arrQuestionText->orderByRaw('RANDOM()')->take($objRank['qt_type_text']);
+                $arrQuestionIcon->orderByRaw('RANDOM()')->take($objRank['qt_type_icon']);
+                $arrQuestionPic->orderByRaw('RANDOM()')->take($objRank['qt_type_pic']);   
                 
             }else{
 
