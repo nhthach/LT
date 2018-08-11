@@ -15,10 +15,10 @@
 					<div class="might-top">
 						<h4>
 						<a  href='{{asset('/')}}{{App\Library\Library::stripUnicode($view->category['url'])}}/{{App\Library\Library::stripUnicode($view->title)}}/{{$view->id}}' title='{{$view->title}}'>
-							{{$view->title}}
+							{!!$view->title!!}
 						</a>
 						</h4>
-						<p>{{$view->shortcontent}}</p> 
+						<p>{!!substr($view->shortcontent,1,100)!!}....</p> 
 					</div>
 					<div class="clearfix"></div>
 				</div>	

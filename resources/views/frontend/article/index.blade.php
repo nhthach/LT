@@ -7,9 +7,9 @@
 <div  id="item-acticle">
 	<div class="single">
 		<div class="single-top">
-					<a href="#">
+					{{-- <a href="#">
 						{{Html::image($article->shortimg, $article->title, array('class' => 'img-responsive')) }}
-					</a>
+					</a> --}}
 					<div class=" single-grid">
 						<h4>{{$article->title}}</h4>				
 							<ul class="blog-ic">
@@ -18,7 +18,7 @@
 		  						 <li><span><i class="glyphicon glyphicon-eye-open"> </i>View: {{$article->view}}</span></li>
 		  					</ul>		  						
 					<div class="content-article">
-						<p>{{$article->content}}</p>
+						{!!$article->content!!}
 					</div>			
 					</div>
     				
@@ -65,7 +65,7 @@
 								  +"<img src="+data[i].shortimg+" alt="+data[i].title+"></a>"
 								  +"<a href='"+urlBasic+""+data[i].category_name+"/"+data[i].link+"/"+data[i].id+"'>"
 								  +"<h4>"+data[i].title+"</h4></a>"
-								  +"<p>"+data[i].shortcontent+"</p>"	
+								  +"<p>"+(data[i].shortcontent).slice(0, 100)+"..."+"</p>"	
 								  +"</div>";
 
 					outputText += divHtml;

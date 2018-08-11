@@ -18,10 +18,10 @@ class CreateArticelsTable extends Migration
             $table->increments('id')->index();
             $table->unsignedInteger('user_id')->nullable()->index();
             $table->unsignedInteger('category_id')->nullable()->index();
-            $table->string('title');
-            $table->string('shortcontent');
-            $table->string('shortimg');
-            $table->text('content');
+            $table->text('title');
+            $table->longText('shortcontent');
+            $table->text('shortimg');
+            $table->longText('content');
             $table->integer('view')->default('1');   
             $table->boolean('isactive')->default('1');
             $table->timestamps();
