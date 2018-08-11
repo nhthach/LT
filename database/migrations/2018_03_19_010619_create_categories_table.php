@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id')->index();
             $table->string('name',100);
             $table->string('url',100);
+            $table->integer('sort')->default('0');
             $table->unsignedInteger('parent_id')->index()->nullable()->default(null);
             $table->boolean('isactive')->default('1');
             $table->timestamps();

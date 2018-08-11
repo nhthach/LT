@@ -17,15 +17,15 @@ class AdminTableSeeder extends Seeder
         $role_employee = Role::where('name', 'Employee')->first();
 	    $role_manager  = Role::where('name', 'Manager')->first();
 	    $employee = new Admin();
-	    $employee->name = 'Employee Name';
-	    $employee->email = 'employee@example.com';
+	    $employee->name = 'Nhân Viên';
+	    $employee->email = 'employee@hocluatgiaothong.com';
 	    $employee->password = bcrypt('123456');
 	    $employee->save();
 	    $employee->roles()->attach($role_employee);
 	    $manager = new Admin();
 	    $manager->name ='Thach Nguyen';
-	    $manager->email = 'manager@example.com';
-	    $manager->password = bcrypt('123456');
+	    $manager->email = 'manager@hocluatgiaothong.com';
+	    $manager->password = bcrypt('123456789');
 	    $manager->save();
 	    $manager->roles()->attach($role_manager);
     }

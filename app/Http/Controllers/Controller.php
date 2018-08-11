@@ -18,7 +18,7 @@ class Controller extends BaseController
 
      public function __construct()
     {
-    	 $categories = Category::where('parent_id', '=', null)->get();
+    	 $categories = Category::GetAll();
     	 $config= Configsystem::firstOrFail();
     	 $topViewAds = Article::GetTopNews(6);
     	 $topTips = Article::GetTopTips(10);

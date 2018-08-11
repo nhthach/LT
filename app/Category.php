@@ -22,6 +22,10 @@ class Category extends Model
          return $this->hasMany(Article::class,'category_id','id');
     }
 
+    public function scopeGetAll(){
+        return $this->where('parent_id', '=', null)->orderBy('sort', 'asc')->get();
+    }
+
     public function parent()
     {
         return $this->belongsTo(self::class, 'parent_id');
