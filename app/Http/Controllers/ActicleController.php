@@ -18,25 +18,23 @@ class ActicleController extends Controller
      */
     public function index()
     { 
-        echo "day la trang php";
-        // die();
-        // $request = Request();
-        // $prefix =  trim($request->route()->getPrefix(),"/");
-        // $url = Library::stripUnicode($prefix);
-        // $category =  Category::where('url', $url)->firstOrFail();
+        $request = Request();
+        $prefix =  trim($request->route()->getPrefix(),"/");
+        $url = Library::stripUnicode($prefix);
+        $category =  Category::where('url', $url)->firstOrFail();
 
-        // if($category->id){
-        //     $articles = Article::with('category');
-        //     $breadcrumb = '';
-        //     if(strcmp($url,'trang-chu')!= 0){
-        //       $articles = $articles->where('category_id',$category->id);
-        //       $breadcrumb = $category->name;
-        //     }
+        if($category->id){
+            $articles = Article::with('category');
+            $breadcrumb = '';
+            if(strcmp($url,'trang-chu')!= 0){
+              $articles = $articles->where('category_id',$category->id);
+              $breadcrumb = $category->name;
+            }
              
 
-        //    $articles =  $articles->orderByRaw('(updated_at) desc')->paginate(10);
-        //     return view('frontend.article',['articles' => $articles,'breadcrumb'=>$breadcrumb]); 
-        // }  
+           $articles =  $articles->orderByRaw('(updated_at) desc')->paginate(10);
+            return view('frontend.article',['articles' => $articles,'breadcrumb'=>$breadcrumb]); 
+        }  
     }
 
 
