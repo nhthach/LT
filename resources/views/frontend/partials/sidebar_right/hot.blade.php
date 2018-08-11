@@ -18,7 +18,7 @@
 							{!!$view->title!!}
 						</a>
 						</h4>
-						<p>{!!substr($view->shortcontent,1,100)!!}....</p> 
+						<p>{!!substr($view->shortcontent,0,100)!!}....</p> 
 					</div>
 					<div class="clearfix"></div>
 				</div>	

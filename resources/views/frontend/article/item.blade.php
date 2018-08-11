@@ -15,6 +15,6 @@
 			{!!$item->title!!}
 		</a>
 	</h3>
-	<p>{!!substr($item->shortcontent,1,190)!!} ....</p>
+	<p>{!!substr($item->shortcontent,0,190)!!} ....</p>
 	<label>{!!$item->created_at!!}</label>
 </div>
