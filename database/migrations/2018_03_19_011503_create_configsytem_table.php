@@ -14,7 +14,7 @@ class CreateConfigsytemTable extends Migration
     public function up()
     {
         Schema::create('configsystem', function (Blueprint $table) {
-            $table->uuid('id')->index();
+            $table->string('id',100)->index();
             $table->string('title',100);
             $table->string('icon',200);
             $table->string('imgpage',200);
