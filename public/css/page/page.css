@@ -1,0 +1,196 @@
+.header-top {
+    background: #eee;
+}
+.title-header{
+    color: #171f17;
+}
+.menu {
+    
+}
+.about-left{
+		border-right: 1px dotted #ccc;
+	}
+.exam{
+    font-size: 14px !important;
+}
+.exam-header {
+    margin-bottom: 0;
+}
+.exam-header .exam-heading-h1{
+	font-weight: 600;
+}
+.exam-heading-h1
+{
+	font: 18px "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    border-left: 3px solid #e54e53;
+    padding-left: 14px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.progress{
+    height: 10px !important;
+}
+
+.ex_reviewQuestion ol { list-style-type: none !important; margin: 0 !important; padding: 0 !important; zoom: 1 !important; position: relative !important; border: 0 !important }
+.ex_reviewQuestion li { float: left !important; margin-right: 2%; margin-bottom: 5px; width: 8%; height: 30px; line-height: 30px; text-align: center; background-color: #eee; cursor: pointer !important; list-style-type: none !important; font-size: 17px}
+.ex_reviewQuestionWrong ,.ex_reviewQuestionDid {
+    font-weight: 500; 
+    color: #fff;
+}
+.ex_reviewQuestionWrong{
+     background-color: #d34836 !important;
+}
+.ex_reviewQuestionDid{
+    background-color: rgb(108, 165, 76)!important;
+}
+.ex_reviewLegend{ padding: 5px !important; margin-bottom: 8px !important }
+.ex_reviewLegend ol { padding: 0 !important }
+.ex_reviewLegend li, .ex_reviewLegend ol { list-style-type: none !important; margin: 0 !important; border: 0 !important }
+.ex_reviewLegend li { float: left !important; padding-right: 5px !important; background-image: none !important }
+.ex_reviewColor { height: 10px !important; width: 10px !important; display: inline-block !important; margin-right: 2px !important }
+
+.ex_ProQuiz_list {
+     list-style-type: none !important;
+}
+.ex_ProQuiz_list{
+    border: 0 !important;
+}
+.ex_ProQuiz_list 
+.ex_ProQuiz_header{
+    font-weight: bold;
+    color: #be4131;
+    margin: 0 0 10px 0;
+}
+.ex_ProQuiz_listItem{
+    position: relative !important;
+    border: 0 !important;
+    background-image: none !important;
+}
+.ex_ProQuiz_question_text{
+    margin-bottom: 15px !important
+}
+.ex_ProQuiz_questionList {
+    margin-bottom: 15px !important;
+    background: #F8FAF5 !important;
+    border: 1px solid #C3D1A3 !important;
+    padding: 10px !important;
+    list-style: none !important;
+}
+
+.ex_ProQuiz_questionListItem {
+    padding: 3px !important;
+    margin-bottom: 5px !important;
+    background-image: none !important;
+    margin-left: 0 !important;
+    list-style: none !important;
+    border: 0 !important;
+}
+.ex_ProQuiz_answerCorrect {
+    background: #6DB46D !important;
+}
+.ex_ProQuiz_questionListItem {
+    padding: 3px !important;
+    margin-bottom: 5px !important;
+    background-image: none !important;
+    margin-left: 0 !important;
+    list-style: none !important;
+    border: 0 !important;
+}
+.ex_ProQuiz_questionListItem:last-child {
+    padding: 3px !important;
+    margin-bottom: 5px !important;
+    background-image: none !important;
+    margin-left: 0 !important;
+    list-style: none !important;
+    border: 0 !important;
+}
+.ex_ProQuiz_questionListItem input, .ex_ProQuiz_questionListItem label {
+    margin: 0 !important;
+    font-weight: 400;
+    display: inline;
+}
+.ex_ProQuiz_button{
+    background: #00aa00 !important;
+}
+.doexam {
+    font-size: 14px;
+    width: inherit;
+    color: #666;
+    font-weight: 500;
+    line-height: 20px;
+    border: 1px dashed #eee;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    margin:4px 0px 5px 0px;
+    padding:5px 0px 5px 0px;
+
+}
+
+.exam-info{
+    text-align: left;
+    max-width: 100%;
+    position: relative;
+    padding: 5px;
+}   
+
+.ex {
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.quiz_button{
+   position: relative;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+    border: none;
+    font-size: 13px;
+    color: #FFFFFF;
+/*    padding: 5px;
+    width: 80px;*/
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 1px;
+    text-align: center;
+}
+.quiz_button:after {
+    content: "";
+    background: #e6c1c1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.quiz_button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+#licensen_type img {
+    width:150px !important;
+    height:150px !important;
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+@media only screen and (max-width: 479px){
+   #licensen_type img {
+     width:100%;
+     height: 100%;
+   }
+}
