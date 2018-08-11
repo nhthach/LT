@@ -34,7 +34,7 @@ class ActicleController extends Controller
 
         if($category->id){
            
-            $articel =  Article::where('category_id',$category->id)->orderByRaw('RAND()')->take(12)
+            $articel =  Article::where('category_id',$category->id)->orderByRaw('random()')->take(12)
                                          ->get();
             foreach ($articel as $key => $value) {
                  $articel[$key]['category_name'] = Library::stripUnicode($value['category']->url);
