@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
                           ['key'=>'2','value'=>['B1','B2']],
                           ['key'=>'2','value'=>['C']],
                           ['key'=>'2','value'=>['D']]];
-        $arQuestionType=['Câu hỏi hình','Câu hỏi biển báo','Câu hỏi xa hình'];
+        $arQuestionType=['Câu hỏi kiến thức','Câu hỏi biển báo','Câu hỏi xa hình'];
 
         for ($i=0;$i<count($arrLicenseType) ; $i++) {
            $type = new LicenseType();
