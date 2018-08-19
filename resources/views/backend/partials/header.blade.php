@@ -216,7 +216,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{asset('dist/img/avatar5.png')}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ Auth::user()->name }}</span>
+              <span class="hidden-xs">{{ Auth::user()->getName() }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -226,12 +226,13 @@
                 <p>
                   {{ Auth::user()->name }}
                   <small>Member since  {{ Auth::user()->created_at }}</small>
-                  
+                  <small><b>Your has permission with: {{ strtoupper(Auth::user()->getRoles()) }}</b></small>
                 </p>
+
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
-                <d{{-- iv class="row">
+              {{-- <li class="user-body"> --}}
+                {{--<d iv class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
                   </div>
@@ -243,7 +244,7 @@
                   </div>
                 </div> --}}
                 <!-- /.row -->
-              </li>
+              {{-- </li> --}}
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">

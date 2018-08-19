@@ -70,6 +70,17 @@ Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
 			'uses'=>'QuestionController@adminStore'
 		]);
 
+		Route::get('/import',[
+			'as'=>'import',
+			'uses'=>'QuestionController@adminGUIIm'
+		]);
+
+		Route::post('/import',[
+			'as'=>'add_import',
+			'uses'=>'QuestionController@adminADDIm'
+		]);
+
+
 	
 		Route::get('/{id}/edit',[
 			'as'=>'edit',

@@ -8,8 +8,20 @@
     
 }
 .about-left{
-		border-right: 1px dotted #ccc;
-	}
+	/*border-right: 1px dotted #ccc;*/   
+}
+.about-right
+{
+    border-left: 1px dotted #ccc;
+}
+.sidebar-right
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ef3636; 
+}
 .exam{
     font-size: 14px !important;
 }

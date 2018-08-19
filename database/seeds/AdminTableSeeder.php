@@ -18,7 +18,7 @@ class AdminTableSeeder extends Seeder
 	    $role_manager  = Role::where('name', 'Manager')->first();
 	    $employee = new Admin();
 	    $employee->name = 'Nhân Viên';
-	    $employee->email = 'employee@hocluatgiaothong.com';
+	    $employee->email = '	';
 	    $employee->password = bcrypt('123456');
 	    $employee->save();
 	    $employee->roles()->attach($role_employee);

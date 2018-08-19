@@ -12,8 +12,8 @@
 						</div>
 					</div> --}}
 					@include('frontend.partials.sidebar_right.hot')
+					@include('frontend.partials.sidebar_right._info')
 					@include('frontend.partials.sidebar_right.tick')
-					
 					{{-- <div class="abt-2">
 						<h3>NEWS LETTER</h3>
 						<div class="news">

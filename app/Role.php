@@ -27,17 +27,17 @@ class Role extends Model
     	return $this->admins()->count();
     }
 
-    public function hasAccess(array $permissions) : bool
+    public function hasAccess(array $permissions, string $action) : bool
     {
         foreach ($permissions as $permission) {
-            if ($this->hasPermission($permission))
+            if ($this->hasPermission($permission, $action))
                 return true;
         }
         return false;
     }
 
-    private function hasPermission(string $permission) : bool
+    private function hasPermission(string $permission,string $action) : bool
     {
-        return $this->permissions[$permission] ?? false;
+        return $this->permissions[$permission][$action] == 'yes' ?? false;
     }
 }

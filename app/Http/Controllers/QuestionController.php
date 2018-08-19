@@ -55,6 +55,12 @@ class QuestionController extends Controller
                     'licenseType'=>$licenseType,'questiontypes'=>$questiontypes,
                     'licenseRanks' => $licenseRanks, 'exams' => $exams]);
     }
+
+    public function adminGUIIm(){
+        $breadcrumb = "Import Question";
+        return view('backend.question.import')
+                 ->with(['breadcrumb'=>$breadcrumb]);
+    }
     /**
      * Store a newly created resource in storage.
      *

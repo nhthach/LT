@@ -43,15 +43,39 @@ class Admin extends Authenticatable
     {
       return $this->belongsToMany(Role::class);
     }
-
+    /**
+    *
+    */
+    public function getName(){
+        return $this->name;
+    }
+    public function isAdmin():bool
+    {
+        foreach ($this -> roles as $role) {
+            if($role->name == 'manager'){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public function getRoles() 
+    {
+        $arr_roles = array();
+        foreach ($this->roles as $role) {
+         array_push($arr_roles, $role->name);
+        }
+       return implode(',',$arr_roles);
+    }
      /**
      * Checks if User has access to $permissions.
      */
-    public function hasAccess(array $permissions) : bool
+
+    public function hasAccess(array $permissions,string $action='read') : string
     {
         // check if the permission is available in any role
         foreach ($this->roles as $role) {
-            if($role->hasAccess($permissions)) {
+            if($role->hasAccess($permissions,$action)) {
                 return true;
             }
         }

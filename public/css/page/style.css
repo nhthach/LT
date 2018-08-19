@@ -546,11 +546,12 @@ ul.navig li a.active{
 }
 .heading h3 {
 	color: #fff;
-	background: #190608;
+	background: rgb(208, 64, 33);
 	padding: 9px 0px;
-	border: 1px solid #190608;
+	border: 1px solid rgb(239, 54, 54);
 	font-size: 15px;
 	border-radius: 5px;
+	text-transform: uppercase;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
