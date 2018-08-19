@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
 
+
 	protected $appends = [
         'adminCount'
     ];
@@ -38,6 +39,7 @@ class Role extends Model
 
     private function hasPermission(string $permission,string $action) : bool
     {
-        return $this->permissions[$permission][$action] == 'yes' ?? false;
+        $objPermisson =json_decode($this->permissions, true);
+        return $objPermisson[$permission][$action] == 'yes' ?? false;
     }
 }

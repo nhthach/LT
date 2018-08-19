@@ -26,10 +26,24 @@ class DatabaseSeeder extends Seeder
     public function createDateDefault(){
 
         $arrLicenseType =[['Xe Hai Bánh','img/page/moto.png'],['Xe Bốn Bánh','img/page/oto.png']];
-        $arrLicenseRank =[['key'=>'1','value'=>['A1','A2','A3','A4']],
-                          ['key'=>'2','value'=>['B1','B2']],
-                          ['key'=>'2','value'=>['C']],
-                          ['key'=>'2','value'=>['D']]];
+
+        $arrLicenseRank =[['key'=>'1','value'=>[['A1','20','18','10','5','5','15'],
+                                                ['A2','20','18','10','5','5','15'],
+                                                ['A3','20','18','10','5','5','15'],
+                                                ['A4','20','18','10','5','5','15']
+                                              ]],
+                          ['key'=>'2','value'=>[['B1','30','26','15','7','5','30'],
+                                               ['B2','30','26','15','7','5','30']]],
+
+                          ['key'=>'2','value'=>[['C','30','28','15','7','5','30']]],
+
+                          ['key'=>'2','value'=>[['D','30','28','15','7','5','30']]],
+
+                          ['key'=>'2','value'=>[['E','30','28','15','7','5','30']]],
+                          
+                          ['key'=>'2','value'=>[['F','30','28','15','7','5','30']]],
+                        ];
+
         $arQuestionType=['Câu hỏi kiến thức','Câu hỏi biển báo','Câu hỏi xa hình'];
 
         for ($i=0;$i<count($arrLicenseType) ; $i++) {
@@ -44,13 +58,13 @@ class DatabaseSeeder extends Seeder
                   foreach ($value['value'] as $val) {
                      $class=  new LicenseRank();
                      $class->licensetype_id  = $value['key'];
-                     $class->name  =  $val;
-                     $class->nbquestion =20;
-                     $class->nbcorrect =18;
-                     $class->qt_type_text =10;
-                     $class->qt_type_icon =5;
-                     $class->qt_type_pic=5;
-                     $class->timework =15;
+                     $class->name  =  $val[0];
+                     $class->nbquestion =$val[1];
+                     $class->nbcorrect =$val[2];
+                     $class->qt_type_text =$val[3];
+                     $class->qt_type_icon =$val[4];
+                     $class->qt_type_pic=$val[5];
+                     $class->timework =$val[6];
                      $class ->save();
                   }
             }
